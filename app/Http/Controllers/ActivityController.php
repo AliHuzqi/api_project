@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
+
+    
     /**
      * Display a listing of the resource.
      */
