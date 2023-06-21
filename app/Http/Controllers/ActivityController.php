@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
-
+// khhg
     // osrihjn
     /**
      * Display a listing of the resource.
