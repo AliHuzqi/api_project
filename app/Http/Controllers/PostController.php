@@ -17,6 +17,12 @@ class PostController extends Controller
         return parent::success($post);
     }
 
+    public function get_by_gender($gender)
+    {
+        $post = post::where('gender', $gender)->get();
+        return parent::success($post);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -133,7 +139,7 @@ class PostController extends Controller
     {
         try {
             $post = post::findOrFail($id);
-            $post->destroy();
+            $post->destroy($id);
             return parent::success("Post $post->title Deleted Successfully");
         } catch (\Exception) {
             return parent::error('Post Not Found');
